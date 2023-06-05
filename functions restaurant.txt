@@ -1,0 +1,11 @@
+1. Fullføre innlogging hos brukere og
+ansatte.
+
+2. Lage meny og bestillingssystem
+som brukere kan se og bruke for å
+bestille mat og betale for det.
+
+La ansatte sette inn og ta vekk
+items fra menyen som brukere vil se.
+
+3. Muligheten for brukere å reservere bord.

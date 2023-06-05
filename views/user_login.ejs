@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User Login</title>
+    <link rel="stylesheet" href="style_user.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login form"> 
+    <header>User Log-in</header>
+
+    <form action="/user" method="post">
+      <div class="input-field">
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname"></div>
+      <div class="input-field">
+        <input type="text" name="lastname" id="lastname" placeholder="Lastname"></div>
+      <div class="input-field">
+        <input type="password" name="password" id="password" placeholder="Password"></div>
+        <a href="#">Forgot password?</a>
+      <input type="submit" value="Log In">
+    </form>
+    
+    <div class="button">
+      <a href="/staff_login"><button>Staff Login</button></a>
+    </div>
+
+    <!--fix it!!-->
+    <div class="signup">
+      <span class="signup">Don't have an account?
+      <a href="/signup"><label for="check">Signup</label></a>
+      </span>
+    </div>
+    </div>
+  </div> 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Staff Login</title>
+    <link rel="stylesheet" href="style_staff.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login form"> 
+    <header>Staff Log-in</header>
+
+    <form action="/user" method="post">
+      <div class="input-field">
+        <input type="text" name="firstname" id="firstname" placeholder="Enter your firstname"></div>
+      <div class="input-field">
+        <input type="text" name="lastname" id="lastname" placeholder="Enter your lastname"></div>
+      <div class="input-field">
+        <input type="password" name="password" id="password" placeholder="Password"></div>
+        <a href="#">Forgot password?</a>
+      <input type="submit" value="Log In">
+    </form>
+
+    <div class="button">
+      <a href="/back_user_login"><button>User Login</button></a>
+    </div>
+
+    <div class="signup">
+        <span class="signup">Don't have an account?
+        <label>Call administration!</label>
+        </span>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>

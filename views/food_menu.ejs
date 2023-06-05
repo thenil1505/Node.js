@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu_style.css">
+    <title>Menu and Order</title>
+</head>
+<body>
+    <h2>Food Menu</h2>
+    <div id="menu"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Food Name</th>
+          <th>Price</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(function(d) { %>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td><%= d.food_name %></td>
+            <td><%= d.food_price %></td>
+            <td><%= d.category %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <br>
+
+    <a href="/order_drink" class="button">Go to Drink Menu</a>
+
+    <a href="/home" class="button_home">Home</a>
+
+    <a href="/order" class="button">Order</a>
+
+</body>
+</html>
