@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="work_style.css">
+    <title>Work at our Restaurant</title>
+</head>
+
+
+<body>
+    <div class="header">
+        <h1>Work at our restaurants</h1>
+        <p>Interested?</p>
+      </div>
+
+    <div class="navbar">
+        <a href="/order">Order</a>
+        <a href="/reserve">Reserve</a>
+        <a href="/home">Home</a>
+        <a href="/logout" class="right">Log-out</a>
+        
+    </div>
+    <br>
+    <h1>Have you been wanting to work in our crew?</h1>
+    <div class="content">
+    <p> Here you can see all our available work positions</p>
+    <p>Contact us by email or phone number</p>
+    <p>We're looking forward to hearing from you!</p>
+    <br>
+    <br>
+
+    <div class="slideshow-container">
+        <div class="slide">
+          <h2>Chef</h2>
+          <p>Interested in working by the stove?</p>
+          <p>Then this is the position for you!</p>
+          <br>
+          <p>Contact us by this email <a href="mailto:post@thenil.com">post@thenil.com</a></p>
+        </div>
+        <div class="slide">
+            <h2>Server</h2>
+            <p>Interested in serving our wonderful guests with delicious food?</p>
+            <p>Then this is the position for you!</p>
+            <br>
+            <p>Contact us by this email <a href="mailto:post@thenil.com">post@thenil.com</a></p>
+        </div>
+        <div class="slide">
+            <h2>Co-owner</h2>
+            <p>Interested in helping us maintain our business?</p>
+            <p>Then this is the position for you!</p>
+            <br>
+            <p>Contact us by this email <a href="mailto:post@thenil.com">post@thenil.com</a></p>
+        </div>
+        <!-- Navigation arrows -->
+        <div class="prev">&#10094;</div>
+        <div class="next">&#10095;</div>
+      </div>
+      
+
+
+
+
+    </div>
+    <div class="footer_content">
+    <div class="footer_contact">
+        <h3>Thenil Administration</p>
+        <h3>Bodøveien 40b</p>
+        <h3>Postbox 2643 Sentrum</p>
+        <h3>8025 Bodø</p>
+        <a href="mailto:post@thenil.com">post@thenil.com</a>
+    </div>  
+    <div class="footer_links">
+        <div class="footer_link">
+            <a href="/about">About us</a> 
+        </div>
+        <div class="footer_link">
+            <a href="/work">Work at our restaurant!</a> 
+        </div>
+        <div class="footer_link">
+            <a href="/giftcards">Giftcards</a> 
+        </div>
+    </div>
+    <h3>© Thenil & Corporate™ </h3>
+    </div>
+
+</body>
+</html>
+
+<script>
+    // Wait for the document to load
+    document.addEventListener("DOMContentLoaded", function(event) {
+      // Get all slide elements
+      var slides = document.querySelectorAll(".slide");
+      var currentSlide = 0;
+  
+      // Function to show a specific slide
+      function showSlide(slideIndex) {
+        // Hide all slides
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        // Show the specified slide
+        slides[slideIndex].style.display = "block";
+      }
+  
+      // Function to show the previous slide
+      function showPrevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+  
+      // Function to show the next slide
+      function showNextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+  
+      // Add click event listeners to the navigation arrows
+      var prevArrow = document.querySelector(".prev");
+      var nextArrow = document.querySelector(".next");
+  
+      prevArrow.addEventListener("click", showPrevSlide);
+      nextArrow.addEventListener("click", showNextSlide);
+    });
+  </script>
+  

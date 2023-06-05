@@ -73,6 +73,11 @@ app.get('/home', function (req, res) {
     });
 })
 
+app.get('/work', function (req, res) {
+    res.render('work.ejs', {     
+    });
+})
+
 app.get('/booking', function (req, res) {
     var con = connect_db()
 
@@ -140,7 +145,6 @@ app.post('/book_table',(req, res) => {
         console.log('Table has been booked');
         
         res.render('booked.ejs');
- 
     });
 })
 
