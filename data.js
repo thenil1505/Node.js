@@ -3,6 +3,7 @@ var fs = require('fs');
 const express = require('express');
 const cookieParser = require("cookie-parser");
 const sessions = require('express-session');
+const { TINY_BLOB } = require('mysql/lib/protocol/constants/types');
  
 const app = express();
  
@@ -133,10 +134,12 @@ app.get('/order_drink', function (req, res) {
 app.post('/book_table',(req, res) => {
     var con = connect_db()
 
-    var booked = req.body.booked
+    var table_number = req.body.table_number
+    var customer_id = req.body.customer_id
+    var date_time = req.body.date_time
    
-    var sql = `INSERT INTO tables (booked) VALUES (?)`;
-    var values = [booked];
+    var sql = `INSERT INTO book (table_number, customer_id, date_time) VALUES (?,?,?)`;
+    var values = [table_number, customer_id, date_time];
  
     con.query(sql, values, (err, result) => {
         if (err) {

@@ -16,25 +16,44 @@
         <tr>
           <th>Table Number</th>
           <th>Table size</th>
-          <th>Select</th>
+          <th>Book table</th>
+          <th>Set Time</th>
         </tr>
       </thead>
       <tbody>
         <% data.forEach(function(d) { %>
+
+          <form action="/booking" method="post">
           <tr>
+            <input type="hidden" id="table_num" name="table_num" value="table_number">
             <td><%= d.table_number %></td>
+
+            <input type="hidden" id="custom_id" name="custom_id" value="customer_id">
             <td><%= d.table_size %></td>
-            <td><input type="checkbox"></td>
+
+            <input type="hidden" id="date" name="date" value="date_time">
+
+            <td><a href="/book_table" class="button" type="submit">Book this table</a></td>
+
+            <td>
+              <div class="dropdown">
+              <button class="dropbtn">Book Time</button>
+              <div class="dropdown-content">
+                <label for="appt">Choose a time for your booking:</label>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+              </div>
+            </div></td>
           </tr>
+          </form>
+          
         <% }); %>
+
       </tbody>
     </table>
     <br>
     
-
     <a href="/home" class="button_home">Home</a>
 
-    <a href="/book_table" class="button" type="submit">Book this table</a>
 
 </body>
 </html>
